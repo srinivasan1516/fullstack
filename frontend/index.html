@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Simple Full Stack App</h2>
+  <button onclick="loadData()">Get Message</button>
+  <p id="data"></p>
+
+<script>
+async function loadData() {
+  let res = await fetch("/api");
+  let text = await res.text();
+  document.getElementById("data").innerText = text;
+}
+</script>
+</body>
+</html>
+
+
